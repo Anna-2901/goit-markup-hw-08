@@ -1,0 +1,10 @@
+.flexbox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.page-header {
+  padding: 25px 0px;
+  border-bottom: 1px solid $page-header-color;
+}

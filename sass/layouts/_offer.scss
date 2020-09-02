@@ -1,0 +1,40 @@
+.offers {
+  display: flex;
+
+  .text-white {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+    padding: 27px;
+
+    color: $primary-white-color;
+    background: $text-white-color;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .text-white:hover,
+  .text-white:focus {
+    color: $accent-color;
+  }
+}
+
+.offers-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.ofr {
+  display: block;
+}
