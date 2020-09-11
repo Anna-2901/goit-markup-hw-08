@@ -1,16 +1,42 @@
 .criteria {
-  padding-top: 94px;
-  padding-bottom: 0px;
-
   &-list {
-    display: flex;
+    @media screen and (max-width: 1199px) and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
   }
   &-item {
-    width: 270px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (max-width: 1199px) and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+      margin-right: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 30px * 3) / 4);
+      margin-right: 30px;
+      padding-bottom: 0px;
+    }
+    &:nth-child(2n) {
+      @media screen and (max-width: 1199px) and (min-width: $tablet) {
+        margin-right: 0;
+      }
+    }
+    &:not(:last-child) {
+      @media screen and (max-width: 1199px) {
+        padding-bottom: 30px;
+      }
+      @media screen and (min-width: $desktop) {
+        margin-right: 0px;
+      }
+    }
   }
-  &-item:not(:last-child) {
-    margin-right: 30px;
-  }
+
   &-item::before {
     display: block;
     content: " ";
@@ -33,7 +59,7 @@ $icons: "antenna", "clock", "diagram", "astronaut";
 }
 
 .title {
-  margin-top: 0px;
+  margin-top: 30px;
   margin-bottom: 10px;
 
   color: $title-text-color;
@@ -43,6 +69,10 @@ $icons: "antenna", "clock", "diagram", "astronaut";
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    text-align: start;
+  }
 }
 
 .text {

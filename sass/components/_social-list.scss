@@ -7,6 +7,32 @@
   margin-right: 10px;
 }
 
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: $accent-color;
+  }
+
+  &:hover .icon,
+  &:focus .icon {
+    fill: $primary-white-color;
+  }
+}
+.icon {
+  fill: $customers-logo-color;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social-list .link {
   color: $primary-text-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -17,8 +43,34 @@
   }
 }
 
-/*Для футера*/
+/*Иконки футер*/
 
 .social-footer {
+  display: inline-flex;
+  width: 206px;
+}
+
+.icon-footer {
   display: flex;
+  fill: $primary-white-color;
+}
+
+.social-item-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: $social-item-footer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:first-child {
+    margin-left: 0;
+  }
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
 }

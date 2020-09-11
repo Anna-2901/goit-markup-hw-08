@@ -1,15 +1,123 @@
 .section-team {
   background-color: $fon-color;
-  width: auto;
+  width: 100%;
 }
 
 .team-list {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (max-width: 1199px) and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+.team-item {
+  padding-bottom: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  background: $primary-white-color;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (max-width: 767px) and (min-width: $mobile) {
+    width: 100%;
+  }
+  @media screen and (max-width: 1199px) and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 30px * 3) / 4);
+    margin-right: 30px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 0px;
+    }
+  }
+  &:not(:last-child) {
+    @media screen and (min-width: $desktop) {
+      margin-right: 0px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  &:nth-child(2n) {
+    @media screen and (max-width: 1199px) and (min-width: $tablet) {
+      margin-right: 0;
+    }
+  }
+  &:nth-last-child(-n + 2) {
+    @media screen and (max-width: 1199px) and (min-width: $tablet) {
+      margin-bottom: 0px;
+    }
+  }
 }
 
-.team-item {
+.team {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  font-family: Roboto, sans-serif;
+  line-height: 1.18;
+
+  &-profession {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    font-family: Roboto, sans-serif;
+    line-height: 1.18;
+  }
+}
+/*.team-item {
+  padding-bottom: 24px;
+  margin-bottom: 30px;
+  display: block;
+  background-color: $primary-white-color;
+  border-radius: 0px 0px 4px 4px;
+  //width: 100%;
+  // margin-right: auto;
+  //margin-left: auto;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+    margin-left: 0;
+    margin-right: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    padding-bottom: 30px;
+  }
+}
+.team-item:not(:last-child) {
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+  }
+}
+.team-item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0px;
+  }
+}
+
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $primary-white-color;
@@ -20,29 +128,34 @@
   &:not(:last-child) {
     margin-right: 30px;
   }
-}
 
 .team {
-  margin-top: 30px;
-  margin-bottom: 10px;
-
+  text-align: center;
   color: $title-text-color;
-
+  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 30px;
+  margin-bottom: 0;
 
   &-profession {
-    margin-bottom: 16px;
+    margin-bottom: 0;
+    margin-top: 10px;
 
     color: $primary-text-color;
-
+    font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
   }
+  &-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
+*/

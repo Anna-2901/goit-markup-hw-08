@@ -1,11 +1,17 @@
 .navigation {
   display: flex;
-  align-items: center;
   margin-right: auto;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
 }
-
 .site-nav {
   display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   .link {
     display: inline;
@@ -50,7 +56,12 @@
 }
 
 .auth-nav {
-  display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   .link {
     display: inline;
@@ -69,9 +80,13 @@
   .link:focus {
     color: $accent-color;
   }
-
-  &-item:not(:last-child) {
+}
+.auth-nav-item:not(:last-child) {
+  @media screen and (min-width: $desktop) {
     margin-right: 30px;
+  }
+  @media screen and (max-width: 1199px) and (min-width: 768px) {
+    margin-bottom: 10px;
   }
 }
 

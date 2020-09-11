@@ -142,3 +142,40 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
 }
+
+/*Мобильное меню*/
+@media screen and (max-width: 767px) {
+  .menu-button {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .menu-button .icon-menu {
+    display: block;
+  }
+  .menu-button.is-open .icon-menu {
+    display: none;
+  }
+  .menu-button .icon-cross {
+    display: none;
+  }
+  .menu-button.is-open .icon-cross {
+    display: block;
+  }
+  .menu-button:hover,
+  .menu-button:focus {
+    fill: $accent-color;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .menu-button {
+    display: none;
+  }
+}
