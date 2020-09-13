@@ -1,5 +1,4 @@
 .form-checkbox {
-  display: flex;
   align-items: center;
   padding-left: 12px;
   margin-bottom: 30px;
@@ -10,6 +9,10 @@
   letter-spacing: 0.03em;
 
   color: $primary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .checkbox {

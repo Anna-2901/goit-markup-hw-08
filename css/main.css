@@ -636,7 +636,7 @@ header {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -22px;
+  bottom: -8px;
   display: block;
   width: 100%;
   height: 4px;
@@ -929,6 +929,12 @@ header {
   line-height: 1.87;
   letter-spacing: 0.06em;
   cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .form-btn {
+    margin-top: 30px;
+  }
 }
 
 .form-btn:hover, .form-btn:focus {
@@ -1801,6 +1807,12 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   }
 }
 
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 30px 15px;
+  }
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -1808,9 +1820,9 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 100%;
   padding: 40px;
+  overflow-y: scroll;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1825,11 +1837,13 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   .modal {
     width: 450px;
     height: 609px;
+    width: 100%;
   }
 }
 
 @media screen and (min-width: 768px) {
   .modal {
+    position: absolute;
     width: 528px;
     height: 581px;
   }
@@ -1943,9 +1957,6 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 }
 
 .form-checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1956,6 +1967,14 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 768px) {
+  .form-checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .checkbox {
